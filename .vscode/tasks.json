@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build SDL2 Project",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "ray_casting_sdl2.c",
+                "-o",
+                "ray_casting_sdl2.exe",
+
+                "-IC:/msys64/mingw64/include/SDL2",
+                "-LC:/msys64/mingw64/lib",
+
+                "-lSDL2",
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-std=c17",
+                "-lm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
